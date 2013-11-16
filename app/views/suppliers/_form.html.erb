@@ -1,0 +1,25 @@
+<%= simple_form_for(@supplier) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address1 %>
+    <%= f.input :address2 %>
+    <%= f.input :suburb %>
+    <%= f.input :postcode %>
+    <%= f.input :state %>
+    <%= f.input :contactname %>
+    <%= f.input :contactphone %>
+    <%= f.input :contactemail %>
+    <%= f.input :paypal %>
+    <%= f.input :blurb %>
+    <%= f.input :officetype %>
+    <%= f.input :pic1 %>
+    <%= f.input :pic2 %>
+    <%= f.input :pic3 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

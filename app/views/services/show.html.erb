@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @service.supplier %>
+</p>
+
+<p>
+  <strong>Desktype:</strong>
+  <%= @service.desktype %>
+</p>
+
+<p>
+  <strong>Deskrate:</strong>
+  <%= @service.deskrate %>
+</p>
+
+<p>
+  <strong>Wifi:</strong>
+  <%= @service.wifi %>
+</p>
+
+<p>
+  <strong>Wifilimit:</strong>
+  <%= @service.wifilimit %>
+</p>
+
+<p>
+  <strong>Printing:</strong>
+  <%= @service.printing %>
+</p>
+
+<p>
+  <strong>Printingdesc:</strong>
+  <%= @service.printingdesc %>
+</p>
+
+<p>
+  <strong>Sendfax:</strong>
+  <%= @service.sendfax %>
+</p>
+
+<p>
+  <strong>Receivefax:</strong>
+  <%= @service.receivefax %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

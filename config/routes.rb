@@ -1,4 +1,8 @@
 Daydesk::Application.routes.draw do
+  resources :services
+
+  resources :suppliers
+
   root :to => "home#index"
   devise_for :users, :controllers => {:registrations => "registrations"}
   resources :users

@@ -7,9 +7,9 @@
   }
 // make all images responsive by default
 img {
-  @extend .img-responsive;
+  // @extend .img-responsive;
   margin: 0 auto;
-  }
+  } 
 
 // use mixins to create semantic classes
 main {
@@ -39,3 +39,7 @@ section {
   @extend .btn-primary;
   @extend .btn-lg;
   }
+ // 
+ .list-pic {
+  width: 200px;
+ }

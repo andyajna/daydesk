@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131116084301) do
+ActiveRecord::Schema.define(version: 20131116092839) do
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -23,6 +23,42 @@ ActiveRecord::Schema.define(version: 20131116084301) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
+
+  create_table "services", force: true do |t|
+    t.integer  "supplier_id"
+    t.string   "desktype"
+    t.string   "deskrate"
+    t.boolean  "wifi"
+    t.string   "wifilimit"
+    t.boolean  "printing"
+    t.string   "printingdesc"
+    t.boolean  "sendfax"
+    t.boolean  "receivefax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "services", ["supplier_id"], name: "index_services_on_supplier_id"
+
+  create_table "suppliers", force: true do |t|
+    t.string   "name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "suburb"
+    t.string   "postcode"
+    t.string   "state"
+    t.string   "contactname"
+    t.string   "contactphone"
+    t.string   "contactemail"
+    t.string   "paypal"
+    t.text     "blurb"
+    t.string   "officetype"
+    t.string   "pic1"
+    t.string   "pic2"
+    t.string   "pic3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

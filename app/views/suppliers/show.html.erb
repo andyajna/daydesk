@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @supplier.name %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @supplier.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @supplier.address2 %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @supplier.suburb %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @supplier.postcode %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @supplier.state %>
+</p>
+
+<p>
+  <strong>Contactname:</strong>
+  <%= @supplier.contactname %>
+</p>
+
+<p>
+  <strong>Contactphone:</strong>
+  <%= @supplier.contactphone %>
+</p>
+
+<p>
+  <strong>Contactemail:</strong>
+  <%= @supplier.contactemail %>
+</p>
+
+<p>
+  <strong>Paypal:</strong>
+  <%= @supplier.paypal %>
+</p>
+
+<p>
+  <strong>Blurb:</strong>
+  <%= @supplier.blurb %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @supplier.officetype %>
+</p>
+
+<p>
+  <strong>Pic1:</strong>
+  <%= image_tag @supplier.pic1 %>
+</p>
+
+<p>
+  <strong>Pic2:</strong>
+  <%= @supplier.pic2 %>
+</p>
+
+<p>
+  <strong>Pic3:</strong>
+  <%= @supplier.pic3 %>
+</p>
+
+<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+<%= link_to 'Back', suppliers_path %>

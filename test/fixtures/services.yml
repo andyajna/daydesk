@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  supplier_id: 
+  desktype: MyString
+  deskrate: MyString
+  wifi: false
+  wifilimit: MyString
+  printing: false
+  printingdesc: MyString
+  sendfax: false
+  receivefax: false
+
+two:
+  supplier_id: 
+  desktype: MyString
+  deskrate: MyString
+  wifi: false
+  wifilimit: MyString
+  printing: false
+  printingdesc: MyString
+  sendfax: false
+  receivefax: false
