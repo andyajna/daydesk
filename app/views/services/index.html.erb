@@ -1,6 +1,6 @@
 <h1>Listing services</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Supplier</th>
@@ -21,7 +21,7 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
-        <td><%= service.supplier %></td>
+        <td><%= service.supplier.name %></td>
         <td><%= service.desktype %></td>
         <td><%= service.deskrate %></td>
         <td><%= service.wifi %></td>
@@ -30,9 +30,9 @@
         <td><%= service.printingdesc %></td>
         <td><%= service.sendfax %></td>
         <td><%= service.receivefax %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', supplier_service_path(@supplier, service) %></td>
+        <td><%= link_to 'Edit', edit_supplier_service_path(@supplier, service) %></td>
+        <td><%= link_to 'Destroy', supplier_service_path(@supplier, service), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Service', new_service_path %>
+<%= link_to 'New Service', new_supplier_service_path(@supplier) %>
