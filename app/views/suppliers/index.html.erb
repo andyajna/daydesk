@@ -14,8 +14,16 @@
           <%= supplier.address2 %><br>
           <% end %>
           <%= supplier.suburb %> <%= supplier.state %> <%= supplier.postcode %><br><br>
-          <p><strong>Type:</strong><br>
-          <%= supplier.officetype %></p>
+          <p><strong>Summary:</strong><br>
+          <%= supplier.officetype %><br>
+          Wifi: <% if supplier.wifi %>Yes<% else %>No<% end %><br>
+          Wifi Limit: <%= supplier.wifilimit %><br>
+          Printing: <% if supplier.printing %>Yes<% else %>No<% end %><br>
+          Printing Limit: <%= supplier.wifilimit %><br>
+          Send Faxes: <% if supplier.sendfax %>Yes<% else %>No<% end %><br>
+          Receive Faxes: <% if supplier.receivefax %>Yes<% else %>No<% end %><br>
+          Reception: <%= supplier.reception %>
+        </p>
         </div>
         <div class="col-md-3">
           <%= simple_format h truncate(supplier.blurb, :length => 300) %> <%= link_to 'Show Detail', supplier, :class => 'btn btn-xs btn-primary' %>

@@ -23,6 +23,17 @@
           <%= @supplier.contactphone %><br>
           <%= @supplier.contactemail %>
         </p>
+
+        <p>
+          <strong>Service Summary:</strong><br>
+          Wifi: <% if @supplier.wifi %>Yes<% else %>No<% end %><br>
+          Wifi Limit: <%= @supplier.wifilimit %><br>
+          Printing: <% if @supplier.printing %>Yes<% else %>No<% end %><br>
+          Printing Limit: <%= @supplier.wifilimit %><br>
+          Send Faxes: <% if @supplier.sendfax %>Yes<% else %>No<% end %><br>
+          Receive Faxes: <% if @supplier.receivefax %>Yes<% else %>No<% end %><br>
+          Reception: <%= @supplier.reception %>
+        </p>
     </div>
     <div class="col-md-3">
       <%= image_tag @supplier.pic1, class: 'show-pic' %>
@@ -49,10 +60,7 @@
           <tr>
             <th>Desk Type</th>
             <th>Desk Rate</th>
-            <th>Wifi?</th>
-            <th>Printing?</th>
-            <th>Send Fax?</th>
-            <th>Receive Fax?</th>
+            <th>Book</th>
           </tr>
         </thead>
         <tbody>
@@ -60,10 +68,8 @@
           <tr>
             <td><%= service.desktype %></td> 
             <td><%= service.deskrate %></td>
-            <td><% if service.wifi %>Yes<% else %>No<% end %></td>
-            <td><% if service.printing %>Yes<% else %>No<% end %></td>
-            <td><% if service.sendfax %>Yes<% else %>No<% end %></td>
-            <td><% if service.receivefax %>Yes<% else %>No<% end %></td>
+            <td>Booking Button</td>
+
           </tr>
           <% end %>
     </div>
