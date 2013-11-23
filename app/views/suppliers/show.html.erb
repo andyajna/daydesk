@@ -1,9 +1,11 @@
 
 <div class="container">
- <h3>Desk Profile: <%= @supplier.name %></h3> 
+  <p>&nbsp;</p>
  <%= link_to 'Back to List', suppliers_path, class: 'btn btn-success btn-xs' %> 
  <%= link_to 'Edit Profile', edit_supplier_path(@supplier), class: 'btn btn-warning btn-xs' %> 
- <%= link_to 'Add a Desk Listing', new_supplier_service_path(@supplier), class: 'btn btn-warning btn-xs' %><br><br>
+ <%= link_to 'Add a Desk Listing', new_supplier_service_path(@supplier), class: 'btn btn-warning btn-xs' %>
+ <h3><%= @supplier.name %></h3> 
+ 
   <div class="row">
     <div class="col-md-3">
         <p>
@@ -35,32 +37,16 @@
           Reception: <%= @supplier.reception %>
         </p>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-6">
       <%= image_tag @supplier.pic1, class: 'show-pic' %>
-    </div>
-    <div class="col-md-3">
-      <%= image_tag @supplier.pic2, class: 'show-pic' %>
-    </div>
-    <div class="col-md-3">
-      <%= image_tag @supplier.pic3, class: 'show-pic' %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10">
-      <p><strong>Office description:</strong></p>
-      <%= @supplier.officetype %><br><br>
-      <%= simple_format h @supplier.blurb %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10">  
-      <p><strong>Desk Services</strong></p>
+      <p>&nbsp;</p>
       <table class="table">
         <thead>
           <tr>
             <th>Desk Type</th>
             <th>Desk Rate</th>
-            <th>Book</th>
+            <th>Enquiry</th>
+            <th>Reservation</th>
           </tr>
         </thead>
         <tbody>
@@ -68,12 +54,23 @@
           <tr>
             <td><%= service.desktype %></td> 
             <td><%= service.deskrate %></td>
-            <td>Booking Button</td>
+            <td><%= link_to 'Enquire', @supplier, :class => 'btn btn-success btn-xs' %></td>
+            <td><%= link_to 'Reserve a Desk', @supplier, :class => 'btn btn-success btn-xs' %></td>
 
           </tr>
           <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-9">
+      <p><strong>About the space</strong></p>
+      <%= @supplier.officetype %><br><br>
+      <%= simple_format h @supplier.blurb %>
+    </div>
+  </div>
+  
  
 
 </div>

@@ -1,19 +1,19 @@
 
 
 <div class="container">
-<h3>Desks</h3>  
+<h3>Spaces</h3>  
     <% @suppliers.each do |supplier| %>
       <div class="row row-index">
         <div class="col-md-3">
-        <%= image_tag supplier.pic1, :class => 'list-pic' %>  
-        </div>
-        <div class="col-md-3">
-          <strong><%= supplier.name %></strong><br>
+        <strong><%= supplier.name %></strong><br>
           <%= supplier.address1 %><br>
           <% if supplier.address2? %>
           <%= supplier.address2 %><br>
           <% end %>
-          <%= supplier.suburb %> <%= supplier.state %> <%= supplier.postcode %><br><br>
+          <%= supplier.suburb %> <%= supplier.state %> <%= supplier.postcode %><br><br>  
+        <%= image_tag supplier.pic1, :class => 'list-pic' %>  
+        </div>
+        <div class="col-md-3">
           <p><strong>Summary:</strong><br>
           <%= supplier.officetype %><br>
           Wifi: <% if supplier.wifi %>Yes<% else %>No<% end %><br>
@@ -26,16 +26,15 @@
         </p>
         </div>
         <div class="col-md-3">
-          <%= simple_format h truncate(supplier.blurb, :length => 300) %> <%= link_to 'Show Detail', supplier, :class => 'btn btn-xs btn-primary' %>
+          <%= simple_format h truncate(supplier.blurb, :length => 200) %> <%= link_to 'Details & Booking', supplier, :class => 'btn btn-xs btn-primary' %>
         </div>
         <div class="col-md-2"><%= link_to 'Edit', edit_supplier_path(supplier), :class => 'btn btn-warning btn-xs' %> <%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-xs' %></div>
        
         <div class="col-md-1"></div>
       </div>
-     
     <% end %>
+    <p>&nbsp;</p>
+<%= link_to 'New Supplier', new_supplier_path, :class => 'btn btn-success btn-xs' %>    
 </div>
 
-<br>
 
-<%= link_to 'New Supplier', new_supplier_path %>
