@@ -41,6 +41,34 @@
       <%= simple_format h @supplier.blurb %>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-10">  
+      <p><strong>Desk Services</strong></p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Desk Type</th>
+            <th>Desk Rate</th>
+            <th>Wifi?</th>
+            <th>Printing?</th>
+            <th>Send Fax?</th>
+            <th>Receive Fax?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @services.each do |service| %>
+          <tr>
+            <td><%= service.desktype %></td> 
+            <td><%= service.deskrate %></td>
+            <td><% if service.wifi %>Yes<% else %>No<% end %></td>
+            <td><% if service.printing %>Yes<% else %>No<% end %></td>
+            <td><% if service.sendfax %>Yes<% else %>No<% end %></td>
+            <td><% if service.receivefax %>Yes<% else %>No<% end %></td>
+          </tr>
+          <% end %>
+    </div>
+  </div>
+ 
 
 </div>
 
