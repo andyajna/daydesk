@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123015850) do
+ActiveRecord::Schema.define(version: 20131124001648) do
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -65,6 +65,12 @@ ActiveRecord::Schema.define(version: 20131123015850) do
     t.boolean  "sendfax"
     t.boolean  "receivefax"
     t.string   "reception"
+    t.boolean  "coffee"
+    t.string   "coffeedesc"
+    t.boolean  "food"
+    t.string   "fooddesc"
+    t.boolean  "alcohol"
+    t.string   "alcoholdesc"
   end
 
   create_table "users", force: true do |t|

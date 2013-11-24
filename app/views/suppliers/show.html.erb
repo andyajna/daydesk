@@ -26,15 +26,14 @@
           <%= @supplier.contactemail %>
         </p>
 
-        <p>
-          <strong>Service Summary:</strong><br>
-          Wifi: <% if @supplier.wifi %>Yes<% else %>No<% end %><br>
-          Wifi Limit: <%= @supplier.wifilimit %><br>
-          Printing: <% if @supplier.printing %>Yes<% else %>No<% end %><br>
-          Printing Limit: <%= @supplier.wifilimit %><br>
-          Send Faxes: <% if @supplier.sendfax %>Yes<% else %>No<% end %><br>
-          Receive Faxes: <% if @supplier.receivefax %>Yes<% else %>No<% end %><br>
-          Reception: <%= @supplier.reception %>
+        <p><strong>Summary:</strong><br>
+          <%= @supplier.officetype %><br>
+          <i class="fa fa-signal"></i> <% if @supplier.wifi %><%= @supplier.wifilimit %><% else %>No<% end %><br>
+          <i class="fa fa-print"></i> <% if @supplier.printing %><%= @supplier.printingdesc %><% else %>No<% end %><br>
+          <i class="fa fa-coffee"></i> <% if @supplier.coffee %><%= @supplier.coffeedesc %><% else %>No<% end %><br>
+          <i class="fa fa-cutlery"></i> <% if @supplier.food %><%= @supplier.fooddesc %><% else %>No<% end %><br>
+          <i class="fa fa-beer"></i> <% if @supplier.alcohol %><%= @supplier.alcoholdesc %><% else %>No<% end %><br>
+          <i class="fa fa-user"></i> <%= @supplier.reception %>
         </p>
     </div>
     <div class="col-md-6">
