@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<h3>Enquiry Detail</h3>
+
+				<p>
+				  <strong>Name:</strong>
+				  <%= @enquiry.name %>
+				</p>
+
+				<p>
+				  <strong>Email:</strong>
+				  <%= @enquiry.email %>
+				</p>
+
+				<p>
+				  <strong>Message:</strong>
+				  <%= @enquiry.message %>
+				</p>
+				<p>&nbsp;</p>
+				<%= link_to 'Show all enquiries', enquiries_path, :class => 'btn btn-success' %>
+		</div>
+	</div>
+</div>

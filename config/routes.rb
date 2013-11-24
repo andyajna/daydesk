@@ -8,4 +8,7 @@ Daydesk::Application.routes.draw do
   root :to => "suppliers#index"
   devise_for :users, :controllers => {:registrations => "registrations"}
   resources :users
+
+  resources :enquiries
+
 end

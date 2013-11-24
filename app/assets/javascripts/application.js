@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require bootstrap
 //= require_tree .
+
+
+$(document).ready( function() { // Fade out alerts
+    $(".alert").delay(4000).fadeOut(2000);
+});

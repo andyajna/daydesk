@@ -53,7 +53,7 @@
           <tr>
             <td><%= service.desktype %></td> 
             <td><%= service.deskrate %></td>
-            <td><%= link_to 'Enquire', @supplier, :class => 'btn btn-success btn-xs' %></td>
+            <td><%= link_to 'Enquire', new_enquiry_path(:service => service.id), :class => 'btn btn-success btn-xs' %></td>
             <td><%= link_to 'Reserve a Desk', @supplier, :class => 'btn btn-success btn-xs' %></td>
 
           </tr>

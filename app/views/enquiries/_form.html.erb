@@ -1,0 +1,19 @@
+<%= simple_form_for(@enquiry) do |f| %>
+  <%= f.error_notification %>
+
+    <div class="form-group">
+    <%= f.input :name, label: 'Your Name', input_html: { class: 'form-control'} %>
+    </div>
+    <div class="form-group">
+    <%= f.input :email, label: "Your Email", input_html: { class: 'form-control'} %>
+	</div>
+    <div class="form-group">
+    <%= f.input :message, input_html: { class: 'form-control'} %>
+	</div>
+    <div class="form-group">
+    <%= f.input :service_id, as: :hidden, input_html: {value: @service.id} %>
+    </div>
+    <p>&nbsp;</p>
+    <%= f.button :submit, :class => 'btn btn-success', label: 'Send Enquiry' %>
+  
+<% end %>

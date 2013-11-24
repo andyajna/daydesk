@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131124001648) do
+ActiveRecord::Schema.define(version: 20131124043904) do
+
+  create_table "enquiries", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message",    limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "service_id"
+  end
+
+  add_index "enquiries", ["service_id"], name: "index_enquiries_on_service_id"
 
   create_table "roles", force: true do |t|
     t.string   "name"

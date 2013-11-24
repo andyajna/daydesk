@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Thank you for your enquiry <%= @enquiry.name %></h3>
+    <p>Your enquiry has been sent to [supplier name]</p>
+    <p>Here is a copy of your enquiry:</p>
+    <table>
+      <tr>
+        <td><strong>Name</strong></td>
+        <td><%= @enquiry.name %></td>
+      </tr>
+      <tr>
+        <td><strong>Email</strong></td>
+        <td><%= @enquiry.email %></td>
+      </tr>
+      <tr>
+        <td><strong>Supplier</strong></td>
+        <td><%= @enquiry.service.supplier.name %></td>
+      </tr>
+      <tr>
+        <td><strong>Service</strong></td>
+        <td><%= @enquiry.service.desktype %></td>
+      </tr>
+      <tr>
+        <td><strong>Enquiry Message</strong></td>
+        <td><%= @enquiry.message %></td>
+      </tr>
+    </table>
+    <p>Thanks for asking and have a great day!</p>
+  </body>
+</html>
