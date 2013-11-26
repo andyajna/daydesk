@@ -12,7 +12,7 @@ class EnquiriesController < ApplicationController
 
   # GET /enquiries/new
   def new
-    @service = Service.find(params[:service])
+    @supplier = Supplier.find(params[:supplier])
     @enquiry = Enquiry.new
   end
 
@@ -23,7 +23,7 @@ class EnquiriesController < ApplicationController
   # POST /enquiries
   def create
     @enquiry = Enquiry.new(enquiry_params)
-    logger.info { @enquiry.service_id.to_s }
+    logger.info { @enquiry.supplier_id.to_s }
     respond_to do |format|
       if @enquiry.save
         EnquiryMailer.enquiry_email(@enquiry).deliver
@@ -62,6 +62,6 @@ class EnquiriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def enquiry_params
-      params.require(:enquiry).permit(:name, :email, :message, :service_id)
+      params.require(:enquiry).permit(:name, :email, :message, :supplier_id)
     end
 end

@@ -33,7 +33,8 @@
           <i class="fa fa-coffee"></i> <% if @supplier.coffee %><%= @supplier.coffeedesc %><% else %>No<% end %><br>
           <i class="fa fa-cutlery"></i> <% if @supplier.food %><%= @supplier.fooddesc %><% else %>No<% end %><br>
           <i class="fa fa-beer"></i> <% if @supplier.alcohol %><%= @supplier.alcoholdesc %><% else %>No<% end %><br>
-          <i class="fa fa-user"></i> <%= @supplier.reception %>
+          <i class="fa fa-user"></i> <%= @supplier.reception %><br><br>
+          <td><%= link_to 'Enquire', new_enquiry_path(:supplier => @supplier.id), :class => 'btn btn-success btn-xs' %></td>
         </p>
     </div>
     <div class="col-md-6">
@@ -44,7 +45,6 @@
           <tr>
             <th>Desk Type</th>
             <th>Desk Rate</th>
-            <th>Enquiry</th>
             <th>Reservation</th>
           </tr>
         </thead>
@@ -53,8 +53,7 @@
           <tr>
             <td><%= service.desktype %></td> 
             <td><%= service.deskrate %></td>
-            <td><%= link_to 'Enquire', new_enquiry_path(:service => service.id), :class => 'btn btn-success btn-xs' %></td>
-            <td><%= link_to 'Reserve a Desk', @supplier, :class => 'btn btn-success btn-xs' %></td>
+            <td><%= link_to 'Reserve a Desk', new_booking_path(:service => service.id), :class => 'btn btn-success btn-xs' %></td>
 
           </tr>
           <% end %>

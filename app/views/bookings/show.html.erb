@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<h3>Booking Detail</h3>
+
+				<p>
+				  <strong>Name:</strong>
+				  <%= @booking.name %>
+				</p>
+
+				<p>
+				  <strong>Email:</strong>
+				  <%= @booking.email %>
+				</p>
+
+				<p>
+				  <strong>From Date:</strong>
+				  <%= @booking.fromdate %>
+				</p>
+				<p>
+				  <strong>To Date:</strong>
+				  <%= @booking.todate %>
+				</p>
+				<p>&nbsp;</p>
+				<%= link_to 'Show all bookings', bookings_path, :class => 'btn btn-success' %>
+		</div>
+	</div>
+</div>

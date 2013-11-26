@@ -1,6 +1,5 @@
 Daydesk::Application.routes.draw do
  
-
   resources :suppliers do
   	resources :services
   end
@@ -10,5 +9,7 @@ Daydesk::Application.routes.draw do
   resources :users
 
   resources :enquiries
+
+  resources :bookings
 
 end

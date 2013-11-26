@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <h3>Listing Bookings</h3>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td><%= booking.name %></td>
+              <td><%= booking.email %></td>
+              <td><%= booking.fromdate %></td>
+              <td><%= booking.todate %></td>
+              <td><%= link_to 'Show', enquiry %></td>
+              <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+              <td><%= link_to 'Destroy', enquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Booking', new_booking_path, :class => 'btn btn-success' %>
+    </div>
+  </div>
+</div>

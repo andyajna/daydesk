@@ -1,0 +1,21 @@
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :name, label: 'Your Name', input_html: { class: 'form-control'} %>
+    </div>
+    <div class="form-group">
+    <%= f.input :email, label: "Your Email", input_html: { class: 'form-control'} %>
+	</div>
+    <div class="form-group">
+    <%= f.input :fromdate, input_html: { class: 'form-control'} %>
+	</div>
+	<div class="form-group">
+    <%= f.input :todate, input_html: { class: 'form-control'} %>
+	</div>
+    <div class="form-group">
+    <%= f.input :service_id, as: :hidden, input_html: {value: @service.id} %>
+    </div>
+    <p>&nbsp;</p>
+    <%= f.button :submit, :class => 'btn btn-success', label: 'Send Booking' %>
+<% end %>

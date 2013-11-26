@@ -11,7 +11,7 @@
     <%= f.input :message, input_html: { class: 'form-control'} %>
 	</div>
     <div class="form-group">
-    <%= f.input :service_id, as: :hidden, input_html: {value: @service.id} %>
+    <%= f.input :supplier_id, as: :hidden, input_html: {value: @supplier.id} %>
     </div>
     <p>&nbsp;</p>
     <%= f.button :submit, :class => 'btn btn-success', label: 'Send Enquiry' %>

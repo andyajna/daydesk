@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Booking received from a DayDesk user</h3>
+    
+    <table>
+      <tr>
+        <td><strong>Name</strong></td>
+        <td><%= @booking.name %></td>
+      </tr>
+      <tr>
+        <td><strong>Email</strong></td>
+        <td><%= @booking.email %></td>
+      </tr>
+      <tr>
+        <td><strong>Supplier</strong></td>
+        <td><%= @booking.service.supplier.name %></td>
+      </tr>
+      <tr>
+        <td><strong>Service</strong></td>
+        <td><%= @booking.service.desktype %></td>
+      </tr>
+      <tr>
+        <td><strong>From Date</strong></td>
+        <td><%= @booking.fromdate %></td>
+      </tr>
+      <tr>
+        <td><strong>To Date</strong></td>
+        <td><%= @booking.todate %></td>
+      </tr>
+    </table>
+  </body>
+</html>
